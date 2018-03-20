@@ -1,0 +1,27 @@
+# Service Name
+service: my-service
+
+# plugins
+plugins:
+  - serverless-offline
+
+provider:
+  name: aws
+  runtime: nodejs6.10
+  environment: 
+    testLambdaVariable: 'Lambda Environment Variable'
+
+# custom
+custom:
+  serverless-offline:
+    babelOptions:
+      presets: ["es2015", "stage-2"]
+
+functions:
+  hello:
+    handler: handler.hello
+    name: test
+    events:
+      - http:
+          path: task2
+          method: get
