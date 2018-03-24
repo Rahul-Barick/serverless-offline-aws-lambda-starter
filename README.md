@@ -20,7 +20,7 @@ cd serverless-offline-aws-lambda-starter
 npm install
 ```
 
-Start the Offline server
+Start the Serverless Offline
 ```
 sls offline start
 ```
